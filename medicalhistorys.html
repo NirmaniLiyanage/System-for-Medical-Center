@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medical History</title>
+  <style>
+    body {
+     
+    }
+	
+	h1 {
+		  background-color: #008080;
+		  color: white;
+		  padding: 5px;
+		  text-align: center;
+		  margin-top:2px;
+		  }
+		  
+	
+    .header {
+      background-color: #008080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+    .container {
+      margin: 20px;
+    }
+    .teal-box {
+      background-color: #EAFAF1;
+      color: black;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    .input-field {
+      margin-bottom: 10px;
+    }
+    .input-label {
+      display: block;
+      font-weight: bold;
+    }
+    .input-text {
+      height: 20px;
+	
+        padding: 4px 20px;
+        border: 2px solid #008080;
+        background: none;
+        color: #1c87c9;
+        font-size: 16px;
+    }
+    .input-textarea {
+      width: 100%;
+      padding: 10px;
+      height: 400px;
+      box-sizing: border-box; /* Include padding and border in the total width */
+    }
+    .search-button {
+    
+			 display: inline-block;
+			 background-color: #008080;
+			 padding: 10px;
+			 width: 150px;
+			 color: #ffffff;
+			 text-align: center;
+			 border: 4px double #cccccc;
+			 border-radius: 10px;
+			 font-size: 20px;
+			 cursor: pointer;
+			 margin: 20px;
+			 -webkit-transition: all 0.5s; /* add this line, chrome, safari, etc */
+			 -moz-transition: all 0.5s; /* add this line, firefox */
+			 -o-transition: all 0.5s; /* add this line, opera */
+			 transition: all 0.5s; /* add this line */
+		}
+	button:hover {
+			background-color: CadetBlue;
+    }
+	
+	.navbar {
+            background-color: #333; /* Background color for the navigation bar */
+            overflow: hidden; /* Ensure content doesn't overflow */
+        }
+
+        .navbar ul {
+            list-style-type: none; /* Remove bullet points from the list */
+            padding: 0;
+            margin: 0;
+            text-align: right; /* Right-align the text within the navbar */
+        }
+
+        .navbar li {
+            display: inline; /* Display list items inline to create a horizontal menu */
+        }
+
+        .navbar li a {
+            display: inline-block;
+            background-color: #555; /* Button background color */
+            color: #fff; /* Text color for navigation links */
+            text-align: center;
+            padding: 14px 16px; /* Spacing around the links */
+            text-decoration: none;
+            border: 1px solid #333; /* Add a border for button-like appearance */
+            border-radius: 4px; /* Add rounded corners for button-like appearance */
+            margin-left: 5px; /* Add spacing between buttons */
+        }
+
+        .navbar li a:hover {
+            background-color: #777; /* Background color on hover */
+        }
+	
+  </style>
+</head>
+<body>
+	<div class="navbar">
+        <ul>
+            
+			<li><a href="op.html">Home</a></li>
+            <li><a href="appointments.html">Appoinment</a></li>
+            <li><a href="medicalhistorys.html">Medical History</a></li>
+            <li><a href="medicine.html">Medicine</a></li>
+			<li><a href="index.html">Sign Out</a></li>
+			
+        </ul>
+    </div>
+  <h1>Medical History</h1>
+  <div class="container">
+    <div class="teal-box">
+      <form>
+        <div class="input-field">
+          <label for="studentNumber" class="input-label">Student Number:</label>
+          <input type="text" id="studentNumber" name="studentNumber" class="input-text">
+        </div>
+        <button type="submit" class="search-button">Search</button>
+        <div class="input-field">
+          <label for="name" class="input-label">Name:</label>
+          <input type="text" id="name" name="name" class="input-text">
+        </div>
+        <div class="input-field">
+          <label for="condition" class="input-label">Medical Condition:</label>
+          <textarea id="condition" name="condition" class="input-textarea" rows="5" cols="40"></textarea>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</body>
+</html>
