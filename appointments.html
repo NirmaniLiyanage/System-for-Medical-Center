@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Appoinment </title>
+
+	<style>
+
+h1 {
+	background-color: #008080;
+	color: white;
+	padding: 5px;
+	text-align: center;
+	margin-top:50px;
+	}
+	
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+  }
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;n
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+  }
+
+body {color: rgb(52, 23, 85);
+}
+
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 2rem 0rem 0rem 0rem;
+  max-width: 1100px;
+  }
+
+.table-cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%;
+  padding: 0.8em 1.2em;
+  overflow: hidden;
+  list-style-type: none;
+  outline: 1px solid #f1f1f1;
+  text-align: center;
+  font-weight: 300;
+  margin: {
+    top: 1px;
+    left: 1px;
+  }
+
+  &:first-child {
+  	outline: 1px solid #e0dcdc;
+    background: transparent;
+  	@media only screen and (max-width : 768px) {display: none;}
+  }
+  &:nth-child(3) {
+    outline: 1px solid #7e7e8d;
+  }
+  &:nth-child(-n+3) {
+  	padding: {
+  		top: 40px;
+  		bottom: 40px;}
+  }
+  > h3 {
+    font-size: 26px;
+  	margin: {
+  		top: 0;
+  		bottom: 3rem;
+  	}
+  }
+  &.cell-feature {
+	  text-align: left;
+    font-size: 18px;
+  }
+ 
+      }
+    
+  
+
+/* Table columns
+================================== */
+.table-cell  {
+  width: calc(33.33% - 1px);
+  &.cell-feature {
+	  @media only screen and (max-width : 768px) {
+		  width: 100%;
+		  text-align: center;
+	  }
+  }
+}
+
+
+
+
+a.btn {
+  border: 2px solid;
+  padding: .6rem .9rem .6rem .9rem;
+  font-weight: 400;
+  text: {
+    transform: uppercase;
+    decoration: none;
+  }
+  @include transition(0.2s ease-in-out);
+  @include border-radius(.3rem);
+}
+
+.navbar {
+        background-color: #333; /* Background color for the navigation bar */
+        overflow: hidden; /* Ensure content doesn't overflow */
+			
+		position: fixed;
+		top: 0; /* Stick the navigation bar to the top of the viewport */
+		left: 0; /* Optional: Stick it to the left edge of the viewport */
+		width: 100%; /* Optional: Make it span the full width of the viewport */
+		z-index: 1000; /* Optional: Set a higher z-index to ensure it's above other content */
+		background-color: #333; /* Optional: Add a background color */
+		/* Add more styling as needed */
+
+			
+        }
+
+        .navbar ul {
+            list-style-type: none; /* Remove bullet points from the list */
+            padding: 0;
+            margin: 0;
+            text-align: right; /* Right-align the text within the navbar */
+        }
+
+        .navbar li {
+            display: inline; /* Display list items inline to create a horizontal menu */
+        }
+
+        .navbar li a {
+            display: inline-block;
+            background-color: #555; /* Button background color */
+            color: #fff; /* Text color for navigation links */
+            text-align: center;
+            padding: 14px 16px; /* Spacing around the links */
+            text-decoration: none;
+            border: 1px solid #333; /* Add a border for button-like appearance */
+            border-radius: 4px; /* Add rounded corners for button-like appearance */
+            margin-left: 5px; /* Add spacing between buttons */
+        }
+
+        .navbar li a:hover {
+            background-color: #777; /* Background color on hover */
+        }
+
+		
+
+	</style>
+</head>
+
+<body>
+
+	<div class="navbar">
+        <ul>
+		
+			<li><a href="op.html">Home</a></li>
+            <li><a href="appointments.html">Appointment</a></li>
+            <li><a href="medicalhistorys.html">Medical History</a></li>
+            <li><a href="medicine.html">Medicine</a></li>
+			<li><a href="index.html">Sign out</a></li>
+			
+        </ul>
+    </div>
+    <h1 style="text-align: center;">Appoinment</h1>
+    <div class="table">
+        <div class="table-cell"></div>
+        <div class="table-cell plattform">
+          <h3>BOOKED</h3>
+          
+        </div>
+        <div class="table-cell enterprise">
+          <h3> NOT  </h3>
+          
+        </div>
+        <div class="table-cell cell-feature">9.00 AM - 9.30 AM</div>
+        <div class="table-cell">
+          <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+           
+          </svg>
+        </div>
+        <div class="table-cell">
+          <svg class="enterprise-check" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+           
+          </svg>
+        </div>
+        <div class="table-cell cell-feature">9.30 AM - 10.00 AM</div>
+        <div class="table-cell">
+          <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+            
+          </svg>
+        </div>
+        <div class="table-cell">
+          <svg class="enterprise-check" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+        
+          </svg>
+        </div>
+        <div class="table-cell cell-feature">10.00 AM - 10.30 AM</div>
+        <div class="table-cell">
+          <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+            
+          </svg>
+        </div>
+        <div class="table-cell">
+          <svg class="enterprise-check" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+            
+          </svg>
+        </div>
+        <div class="table-cell cell-feature">10.30 AM - 11.30 AM</div>
+        <div class="table-cell">
+          <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+           
+            
+          </svg>
+        </div>
+        <div class="table-cell">
+          <svg class="enterprise-check" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+            
+          </svg>
+        </div>
+        <div class="table-cell cell-feature">11.30 AM - 12.00 PM </div>
+        <div class="table-cell"></div>
+        <div class="table-cell">
+          <svg class="enterprise-check" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+            <title>check_blue</title>
+           
+          </svg>
+        </div>
+        <div class="table-cell cell-feature">1.00 PM - 1.30 PM</div>
+        <div class="table-cell"></div>
+        <div class="table-cell">
+          <svg class="enterprise-check" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+            <title>check_blue</title>
+            
+          </svg>
+        </div>
+        <div class="table-cell cell-feature">1.30 PM - 2.00 PM</div>
+        <div class="table-cell"></div>
+        <div class="table-cell">
+          <svg class="enterprise-check" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+            <title>check_blue</title>
+            
+          </svg>
+        </div>
+        <div class="table-cell cell-feature">2.00 PM - 2.30 PM</div>
+        <div class="table-cell"></div>
+        <div class="table-cell">
+          <svg class="enterprise-check" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+            <title>check_blue</title>
+            
+          </svg>
+        </div>
+        
+      </div>
+
+</body>
+</html>

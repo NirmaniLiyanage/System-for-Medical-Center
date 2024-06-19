@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <title>Doctor's Medication Assignment</title>
+    <style>
+        /* Internal CSS Styles */
+
+        body {background-color: none;}
+		
+	h1 {
+		 background-color: #008080;
+		  color: white;
+		  padding: 5px;
+		  text-align: center;
+		  margin-top:50px;
+		  
+		  
+		}
+		
+	h2 {
+			background-color: #EAFAF1;
+			margin: 20px;
+		}
+
+        
+		
+	button {
+			 display: inline-block;
+			 background-color: #008080;
+			 padding: 10px;
+			 width: 150px;
+			 color: #ffffff;
+			 text-align: center;
+			 border: 4px double #cccccc;
+			 border-radius: 10px;
+			 font-size: 20px;
+			 cursor: pointer;
+			 margin: 20px;
+			 -webkit-transition: all 0.5s; /* add this line, chrome, safari, etc */
+			 -moz-transition: all 0.5s; /* add this line, firefox */
+			 -o-transition: all 0.5s; /* add this line, opera */
+			 transition: all 0.5s; /* add this line */
+		}
+
+	button:hover {background-color: CadetBlue;}
+
+        label {
+        font-size: 20px;
+        font-weight: 700;
+        color: black;
+		padding: 10px 20px
+		background-color:white;
+		margin: 50px;}
+	  
+	select
+     {
+     // Removing the default dropdown arrow
+      
+      background-color: white;
+      border: 2px;
+      
+      margin: 0;
+      width: 300px;
+      font-family: inherit;
+      font-size: 20px;
+      cursor: inherit;
+      line-height: inherit;
+      
+      // Remove focus outline
+      outline: 1px;
+     }
+	  
+     input {
+       
+        height: 20px;
+	
+        padding: 4px 20px;
+        border: 2px solid #008080;
+        background: none;
+        color: #1c87c9;
+        font-size: 16px;
+      }
+        
+	.navbar {
+            background-color: #333; /* Background color for the navigation bar */
+            overflow: hidden; /* Ensure content doesn't overflow */
+			
+			position: fixed;
+			top: 0; /* Stick the navigation bar to the top of the viewport */
+			left: 0; /* Optional: Stick it to the left edge of the viewport */
+			width: 100%; /* Optional: Make it span the full width of the viewport */
+			z-index: 1000; /* Optional: Set a higher z-index to ensure it's above other content */
+			background-color: #333; /* Optional: Add a background color */
+			/* Add more styling as needed */
+
+			
+        }
+
+        .navbar ul {
+            list-style-type: none; /* Remove bullet points from the list */
+            padding: 0;
+            margin: 0;
+            text-align: right; /* Right-align the text within the navbar */
+        }
+
+        .navbar li {
+            display: inline; /* Display list items inline to create a horizontal menu */
+        }
+
+        .navbar li a {
+            display: inline-block;
+            background-color: #555; /* Button background color */
+            color: #fff; /* Text color for navigation links */
+            text-align: center;
+            padding: 14px 16px; /* Spacing around the links */
+            text-decoration: none;
+            border: 1px solid #333; /* Add a border for button-like appearance */
+            border-radius: 4px; /* Add rounded corners for button-like appearance */
+            margin-left: 5px; /* Add spacing between buttons */
+        }
+
+        .navbar li a:hover {
+            background-color: #777; /* Background color on hover */
+        }
+		
+		
+		
+		textarea {
+			margin-left: 50px;
+		}
+</style>
+</head>
+
+
+
+<body>
+	
+
+	<div class="navbar">
+        <ul>
+            <li><a href="op.html">Home</a></li>
+            <li><a href="appointments.html">Appointment</a></li>
+            <li><a href="medicalhistorys.html">Medical History</a></li>
+            <li><a href="medicine.html">Medicine</a></li>
+			<li><a href="login.html">Sign Out</a></li>
+        </ul>
+    </div>
+	
+    <h1>Doctor's Medication Assignment</h1><br>
+    <form id="medication-form" action="ABC.php" method="POST">
+		
+	<div class="container">
+	<label for="patient-name">Patient Name:</label>
+        <input type="text" id="patient-name" name="patient-name" required><br><br>
+	</div>
+
+        
+	<label for="patient-id">Patient ID:</label>
+        
+	<input type="text" id="patient-id" name="patient-id" required="true"><br>
+		
+	<h2>Add medicine here</h2>
+
+        <label for="medication-name">Medication :</label>
+        <select id="medication-name" name="medication-name" required>
+            <option value="medication1">Amoxicillin</option>
+            <option value="medication2">Omeprazole</option>
+            <option value="medication3">Metoprolol</option>
+			<option value="medication3">Atorvastatin</option>
+			<option value="medication3">Lisinopril</option>
+			<option value="medication3">Azithromycin</option>
+			<option value="medication3">loratadine</option>
+			<option value="medication3">Piriton</option>
+            
+        </select>
+
+        <br><br><label for="dosage">Dosage :</label>
+	<input type="text" id="unit" name="unit" required>
+        
+
+        <label for="unit">Unit :</label>
+	<select id="unit-name" name="unit-name" >
+            <option value="dose1">Miligrams(mg)</option>
+            <option value="dose2">Micrograms(mcg)</option>
+            <option value="dose3">Milliliters(ml)</option>
+			<option value="dose3">pills</option>
+			<option value="dose3">Drops</option>
+			<option value="dose3">Capsule</option>
+            </select>
+        
+        <br><br><label for="duration">Duration :</label>
+	<input type="text" id="frequency" name="frequency" required><br>
+		
+	<br><label for="node">Note :</label>
+	<br><textarea name="textarea" rows="6" cols="160"></textarea><br>
+			
+	
+        <button type="submit" value="submit">Add</button>
+		
+    </form>
+	
+	
+</body>
+</html>
